@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Vehicle</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <form id="registerForm">
+        <h2>Register Vehicle</h2>
+
+        <div class="form-group">
+            <label>Owner Name</label>
+            <input type="text" id="ownerName" required />
+            <div class="error" id="ownerNameError"></div>
+        </div>
+
+        <div class="form-group">
+            <label>Vehicle Make and Model</label>
+            <input type="text" id="makeModel" />
+            <div class="error" id="makeModelError"></div>
+        </div>
+
+        <div class="form-group">
+            <label>Vehicle Type</label>
+            <select id="vehicleType">
+                <option value="">Select Type</option>
+                <option value="Sedan">Sedan</option>
+                <option value="SUV">SUV</option>
+                <option value="Truck">Truck</option>
+                <option value="Motorcycle">Motorcycle</option>
+            </select>
+            <div class="error" id="vehicleTypeError"></div>
+        </div>
+
+        <div class="form-group">
+            <label>Registration Number</label>
+            <input type="text" id="regNumber" />
+            <div class="error" id="regNumberError"></div>
+        </div>
+
+        <div class="form-group">
+            <label>Registration Date</label>
+            <input type="date" id="regDate" />
+            <div class="error" id="regDateError"></div>
+        </div>
+
+        <div class="form-group">
+            <input type="checkbox" id="terms" />
+            <label for="terms">I agree to the terms and conditions</label>
+            <div class="error" id="termsError"></div>
+        </div>
+
+        <div class="button-row">
+            <button type="submit" id="submitBtn" disabled>Register</button>
+            <button type="button" onclick="clearForm()">Clear</button>
+        </div>
+
+        <div class="output" id="outputMessage"></div>
+    </form>
+
+    <script  src="../dist/script.js"></script>
+</body>
+
+</html>
